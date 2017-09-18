@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.CheckComboBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs4400gui.NewAttractionController">
+    <top>
+        <Label text="New Attraction Form" BorderPane.alignment="CENTER">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+    </top>
+    <center>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Name*:" />
+                        <TextField fx:id="name" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                    <children>
+                        <Label text="City*:" />
+                        <ChoiceBox fx:id="city" prefHeight="26.0" prefWidth="158.0" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Address*:" />
+                        <TextField fx:id="address" prefHeight="26.0" prefWidth="188.0" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Description*:" />
+                        <TextField fx:id="description" prefHeight="26.0" prefWidth="208.0" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Hours of Operation:" />
+                        <TextField fx:id="hoursOfOperation" prefHeight="26.0" prefWidth="247.0" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Contact Info:" />
+                        <TextField fx:id="contactInfo" prefHeight="26.0" prefWidth="202.0" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                    <Label text="Category:" />
+                    <CheckComboBox fx:id="category" prefHeight="26.0" prefWidth="84.0" />
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Rating (1-5)*:" />
+                        <TextField fx:id="rating" prefHeight="26.0" prefWidth="211.0" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="191.0" text="Comment*:" />
+                        <TextArea fx:id="comment" prefHeight="77.0" prefWidth="307.0" wrapText="true" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+    <bottom>
+        <VBox alignment="CENTER" spacing="5">
+            <children>
+                <Button alignment="CENTER" onAction="#submitAttraction" text="Submit for Review" />
+                <Button onAction="#goBack" text="Back" />
+            </children>
+            <padding>
+                <Insets bottom="5" top="5" />
+            </padding>
+        </VBox>
+    </bottom>
+</BorderPane>

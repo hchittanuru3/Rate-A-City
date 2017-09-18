@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs4400gui.AttractionsListController">
+   <top>
+      <Label text="Attractions" BorderPane.alignment="CENTER">
+       <font>
+           <Font size="60.0" />
+       </font>
+      </Label>
+   </top>
+    <center>
+        <TableView fx:id="attrList" prefHeight="230.0" prefWidth="526.0" BorderPane.alignment="CENTER">
+            <columns>
+            <TableColumn fx:id="name" prefWidth="109.0" text="Name" />
+            <TableColumn fx:id="category" prefWidth="133.0" text="Category" />
+            <TableColumn fx:id="location" minWidth="0.0" prefWidth="96.0" text="Location" />
+            <TableColumn fx:id="avgRating" prefWidth="139.0" text="Average Ratings" />
+            <TableColumn fx:id="numRating" prefWidth="101.0" text="# of Ratings" />
+                <TableColumn fx:id="hyperlink" prefWidth="101.0" text="Click For More" />
+            </columns>
+            <padding>
+                <Insets bottom="5" left="10" right="10" top="5" />
+            </padding>
+        </TableView>
+    </center>
+    <bottom>
+        <VBox alignment="CENTER" spacing="5">
+            <children>
+                <ChoiceBox fx:id="dropSort" prefHeight="26.0" prefWidth="145.0" />
+                <Button alignment="CENTER" onAction="#addAttraction" prefHeight="26.0" prefWidth="147.0" text="Add New Attraction" />
+                <Button alignment="CENTER" onAction="#goBack" prefHeight="26.0" prefWidth="146.0" text="Back" />
+            </children>
+            <padding>
+                <Insets bottom="5.0" top="5" />
+            </padding>
+        </VBox>
+    </bottom>
+</BorderPane>

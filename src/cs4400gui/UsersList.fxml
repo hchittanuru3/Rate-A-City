@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs4400gui.UsersListController">
+    <top>
+        <Label text="Users List" BorderPane.alignment="CENTER">
+            <font>
+                <Font size="60.0" />
+            </font>
+        </Label>
+    </top>
+    <bottom>
+        <VBox alignment="CENTER" spacing="5">
+            <children>
+            <HBox alignment="CENTER" prefHeight="0.0" prefWidth="600.0">
+               <children>
+                  <Label text="Sort: " />
+                      <ChoiceBox fx:id="sort_choicebox" prefWidth="134.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="0.0" prefWidth="600.0">
+               <children>
+                      <Button alignment="CENTER" onAction="#addUser" text="Add New User" />
+                  <Button mnemonicParsing="false" onAction="#deleteUser" text="Delete This User" />
+                  <Button mnemonicParsing="false" onAction="#toggleSuspended" text="Toggle Suspended" />
+                  <Button mnemonicParsing="false" onAction="#promoteUser" text="Toggle Manager" />
+               </children>
+            </HBox>
+                <Button onAction="#goBack" prefWidth="134.0" text="Back" />
+            </children>
+            <padding>
+                <Insets bottom="5.0" top="5" />
+            </padding>
+        </VBox>
+    </bottom>
+   <center>
+      <TableView fx:id="usertable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="emailcol" prefWidth="150.0" text="Email" />
+          <TableColumn fx:id="datecol" minWidth="5.0" prefWidth="140.0" text="Date Joined" />
+            <TableColumn fx:id="userclasscol" prefWidth="166.0" text="User Class" />
+            <TableColumn fx:id="suspendedcol" prefWidth="138.0" text="Suspended" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>

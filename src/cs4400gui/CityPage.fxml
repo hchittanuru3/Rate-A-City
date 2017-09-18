@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs4400gui.CityController">
+    <center>
+        <TableView fx:id="attracList" prefHeight="230.0" prefWidth="526.0" BorderPane.alignment="CENTER">
+            <columns>
+            <TableColumn fx:id="name" prefWidth="90.0" resizable="false" text="Name" />
+            <TableColumn fx:id="location" prefWidth="92.0" resizable="false" text="Location" />
+            <TableColumn fx:id="category" minWidth="0.0" prefWidth="96.0" resizable="false" text="Category" />
+            <TableColumn fx:id="avgRating" prefWidth="120.0" resizable="false" text="Average Rating" />
+            <TableColumn fx:id="numRating" prefWidth="99.0" resizable="false" text="# of Ratings" />
+            <TableColumn fx:id="hyperlink" prefWidth="84.0" resizable="false" text="More Info" />
+            </columns>
+            <padding>
+                <Insets bottom="5" left="10" right="10" top="5" />
+            </padding>
+        </TableView>
+    </center>
+   <top>
+      <VBox alignment="CENTER" prefHeight="79.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="city_name" alignment="CENTER" text="City">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_avgRating" text="Average Rating:" />
+            <Label fx:id="header" text="Attractions:" />
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <BorderPane prefHeight="103.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <center>
+              <VBox alignment="CENTER" prefHeight="69.0" prefWidth="478.0" spacing="5" BorderPane.alignment="CENTER">
+                  <children>
+                  <ChoiceBox fx:id="dropSort" prefWidth="150.0" />
+                  <Button alignment="CENTER" layoutX="241.0" layoutY="15.0" onAction="#addReview" prefHeight="26.0" prefWidth="138.0" text="Review This City" />
+                      <Button alignment="CENTER" onAction="#viewReviews" prefHeight="26.0" prefWidth="138.0" text="View All Reviews" />
+                      <Button alignment="CENTER" onAction="#goBack" prefWidth="134.0" text="Back" />
+                  </children>
+                  <padding>
+                      <Insets bottom="5.0" top="5" />
+                  </padding>
+              </VBox>
+         </center>
+         <right>
+            <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteCity" prefHeight="0.0" prefWidth="122.0" text="Delete This City" visible="false" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   </bottom>
+</BorderPane>

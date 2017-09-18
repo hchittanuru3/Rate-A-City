@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs4400gui.RegistrationController">
+   <top>
+      <Label text="New User Registration" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="686.0" BorderPane.alignment="CENTER">
+         <children>
+            <SplitPane dividerPositions="0.46321070234113715" prefHeight="80.0" prefWidth="200.0">
+               <items>
+                  <Label alignment="CENTER_RIGHT" prefHeight="33.0" prefWidth="280.0" text="Email:" />
+                  <TextField fx:id="email" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="200.0" promptText="Enter your email here" />
+               </items>
+            </SplitPane>
+            <SplitPane dividerPositions="0.5" prefHeight="80.0" prefWidth="200.0">
+               <items>
+                  <Label alignment="CENTER_RIGHT" prefHeight="33.0" prefWidth="280.0" text="Password:" />
+                  <PasswordField fx:id="password" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="200.0" promptText="Enter your password here" />
+               </items>
+            </SplitPane>
+            <SplitPane dividerPositions="0.5" prefHeight="80.0" prefWidth="200.0">
+               <items>
+                  <Label alignment="CENTER_RIGHT" prefHeight="33.0" prefWidth="280.0" text="Confirm Password:" />
+                  <PasswordField fx:id="password_confirm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="200.0" promptText="Confirm your password" />
+               </items>
+            </SplitPane>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#createAccount" text="Create Account" />
+            <Button mnemonicParsing="false" onAction="#goBack" text="Back">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

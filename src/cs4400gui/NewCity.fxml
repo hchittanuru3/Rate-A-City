@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs4400gui.NewCityController">
+    <top>
+        <Label text="New City Form" BorderPane.alignment="CENTER">
+            <font>
+                <Font size="60.0" />
+            </font>
+        </Label>
+    </top>
+    <center>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Name*:" />
+                        <TextField fx:id="name" prefHeight="26.0" prefWidth="160.0" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Country*:" />
+                        <TextField fx:id="country" prefHeight="26.0" prefWidth="173.0" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                    <children>
+                        <Label text="State (if applicable):" />
+                        <TextField fx:id="state" prefHeight="26.0" prefWidth="241.0" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Rating*(1-5):" />
+                  <TextField fx:id="rating" prefHeight="26.0" prefWidth="195.0" />
+                        <!-- Have to add the rating element-->
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+                    <children>
+                  <Label text="Comment*:" />
+                        <TextArea fx:id="comment" prefHeight="50.0" prefWidth="185.0" wrapText="true" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+    <bottom>
+        <VBox alignment="CENTER" spacing="5">
+            <children>
+                <Button alignment="CENTER" onAction="#submitCity" text="Submit for Review" />
+                <Button alignment="CENTER" onAction="#goBack" prefHeight="26.0" prefWidth="135.0" text="Back" />
+            </children>
+            <padding>
+                <Insets bottom="5.0" />
+            </padding>
+        </VBox>
+    </bottom>
+</BorderPane>

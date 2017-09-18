@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs4400gui.CategoriesListController">
+   <top>
+      <Label text="Categories" BorderPane.alignment="CENTER">
+       <font>
+           <Font size="60.0" />
+       </font>
+      </Label>
+   </top>
+    <center>
+        <TableView fx:id="categoryList" BorderPane.alignment="CENTER">
+            <columns>
+            <TableColumn fx:id="name" prefWidth="378.99998474121094" text="Category" />
+            <TableColumn fx:id="numAttr" minWidth="0.0" prefWidth="202.0" text="# of Attractions" />
+            </columns>
+            <padding>
+                <Insets bottom="5" left="10" right="10" top="5" />
+            </padding>
+        </TableView>
+    </center>
+    <bottom>
+        <VBox alignment="CENTER" spacing="5">
+            <children>
+                <ChoiceBox prefWidth="134.0" fx:id="sort"/>
+                <HBox alignment="CENTER" spacing="5">
+                <Button alignment="CENTER" onAction="#addCategory" text="Add New Category" />
+                <Button alignment="CENTER" onAction="#editCategory" text="Edit Category" />
+                <Button alignment="CENTER" onAction="#deleteCategory" text="Delete Category" />
+                </HBox>
+                <Button onAction="#goBack" prefWidth="134.0" text="Back" />
+            </children>
+            <padding>
+                <Insets bottom="5.0" top="5" />
+            </padding>
+        </VBox>
+    </bottom>
+</BorderPane>

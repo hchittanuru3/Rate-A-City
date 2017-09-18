@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs4400gui.UserReviewsController">
+   <top>
+      <Label fx:id="email" text="email's Reviews " BorderPane.alignment="CENTER">
+       <font>
+           <Font size="26.0" />
+       </font>
+      </Label>
+   </top>
+    <center>
+        <TableView fx:id="reviewsList" prefHeight="230.0" prefWidth="526.0" BorderPane.alignment="CENTER">
+            <columns>
+            <TableColumn fx:id="entity" prefWidth="136.0" text="City/Attraction" />
+            <TableColumn fx:id="rating" prefWidth="97.0" text="Rating:" />
+            <TableColumn fx:id="comment" minWidth="0.0" prefWidth="345.0" text="Comment" />
+            </columns>
+            <padding>
+                <Insets bottom="5" left="10" right="10" top="5" />
+            </padding>
+        </TableView>
+    </center>
+    <bottom>
+        <VBox alignment="CENTER" spacing="5">
+            <children>
+                <ChoiceBox fx:id="dropSort" prefWidth="134.0" />
+                <Button alignment="CENTER" onAction="#goBack" prefWidth="134.0" text="Back" />
+            </children>
+            <padding>
+                <Insets bottom="5.0" top="5" />
+            </padding>
+        </VBox>
+    </bottom>
+</BorderPane>
